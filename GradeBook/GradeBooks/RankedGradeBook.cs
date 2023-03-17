@@ -49,5 +49,17 @@ namespace GradeBook.GradeBooks
                 base.CalculateStatistics();
             }
         }
+
+        public override void CalculateStudentStatistics(string name)
+        {
+            if (Students.Count < 5)
+            {
+                throw new InvalidOperationException("You need more than 5 students to calculate student statistics.");
+            }
+            else
+            {
+                base.CalculateStudentStatistics(name);
+            }
+        }
     }
 }
