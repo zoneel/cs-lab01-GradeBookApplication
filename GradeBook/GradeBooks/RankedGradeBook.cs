@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace GradeBook.GradeBooks
 {
-    internal class RankedGradeBook
+    internal class RankedGradeBook : BaseGradeBook
     {
+        public RankedGradeBook(string name) : base(name)
+        {
+            base.Type = Enums.GradeBookType.Ranked;
+        }
     }
 }
