@@ -46,8 +46,7 @@ namespace GradeBook.UserInterfaces
             if (parts[3] == "true")
             {
                 isitweighted = true;
-            }
-            if (parts[3] == "false")
+            }else if (parts[3] == "false")
             {
                 isitweighted = false;
             }
