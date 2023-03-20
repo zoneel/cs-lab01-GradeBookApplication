@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GradeBook.GradeBooks
 {
-    internal class RankedGradeBook : BaseGradeBook
+    public class RankedGradeBook : BaseGradeBook
     {
         public RankedGradeBook(string name, bool weighted) : base(name, weighted)
         {
@@ -21,7 +21,7 @@ namespace GradeBook.GradeBooks
                 throw new InvalidOperationException("You need more than 5 students to calculate letter grading.");
             }
 
-            int twentyPercentOfStudents = (int)Students.Count * (2 / 10); //calculating how much is 20% of students
+            int twentyPercentOfStudents = (int)Students.Count * 2 / 10; //calculating 20% of students
 
             List<double> averageGrades = Students.Select(n => n.AverageGrade).ToList(); //list of avg grades of students
             averageGrades.OrderBy(n => n); //sorted ascending
